@@ -8,24 +8,24 @@ public class CashbackHackServiceTest {
     @org.junit.Test
     public void shouldRemainBelowBoundaryJunit() {
         int purchase = 900;
-        assertEquals(service.remain(purchase), 100);
+        assertEquals(100, service.remain(purchase));
     }
 
     @org.junit.Test
     public void shouldRemainAsBoundaryIfZeroJunit() {
         int purchase = 0;
-        assertEquals(service.remain(purchase), 1000);
+        assertEquals(1000, service.remain(purchase));
     }
 
     @org.junit.Test
     public void shouldBeRemainderIfAboveBoundaryJunit() {
         int purchase = 1300;
-        assertEquals(service.remain(purchase), 700);
+        assertEquals(700, service.remain(purchase));
     }
 
     @org.junit.Test
     public void shouldBeNoRemainderIfBoundaryJunit() {
         int purchase = 1000;
-        assertEquals(service.remain(purchase), 0);
+        assertEquals(0, service.remain(purchase));
     }
 }
